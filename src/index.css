@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ============================================================
+   SUPERMAL KARAWACI — Design Token Foundation
+   Inspired by Grand Indonesia luxury mall aesthetic
+   8pt spacing · Semantic colors · Mobile-first
+   ============================================================ */
+
+@theme {
+  /* ── Brand Palette ── */
+  --color-brand-red: #ff1436;
+  --color-brand-red-dark: #d6001f;
+  --color-brand-red-deep: #730109;
+  --color-brand-gold: #c9a962;
+  --color-brand-gold-muted: #a68b4b;
+  --color-brand-teal: #2dd4bf;
+  --color-brand-teal-muted: #14b8a6;
+
+  /* ── Neutral Scale ── */
+  --color-neutral-white: #ffffff;
+  --color-neutral-gray-1: #e6e6e6;
+  --color-neutral-gray-2: #999999;
+  --color-neutral-gray-3: #777777;
+  --color-neutral-gray-4: #555555;
+  --color-neutral-gray-5: #333333;
+  --color-neutral-black: #161616;
+  --color-black: #000000;
+
+  /* ── Semantic: Primary ── */
+  --color-primary: var(--color-brand-red);
+  --color-primary-hover: var(--color-brand-red-dark);
+  --color-primary-muted: color-mix(in srgb, var(--color-brand-red) 15%, transparent);
+
+  /* ── Semantic: Secondary ── */
+  --color-secondary: var(--color-brand-gold);
+  --color-secondary-hover: var(--color-brand-gold-muted);
+  --color-secondary-muted: color-mix(in srgb, var(--color-brand-gold) 12%, transparent);
+
+  /* ── Semantic: Accent ── */
+  --color-accent: var(--color-brand-teal);
+  --color-accent-hover: var(--color-brand-teal-muted);
+  --color-accent-muted: color-mix(in srgb, var(--color-brand-teal) 12%, transparent);
+
+  /* ── Semantic: Surfaces (Dark Mode Default) ── */
+  --color-background: var(--color-black);
+  --color-surface: var(--color-neutral-black);
+  --color-surface-elevated: #1a1a1a;
+  --color-surface-overlay: #222222;
+  --color-disabled-surface: #2a2a2a;
+
+  /* ── Semantic: Text ── */
+  --color-text-primary: var(--color-neutral-white);
+  --color-text-secondary: var(--color-neutral-gray-2);
+  --color-text-disabled: var(--color-neutral-gray-4);
+  --color-text-inverse: var(--color-black);
+
+  /* ── Semantic: Border & Divider ── */
+  --color-border: #2e2e2e;
+  --color-border-subtle: #1f1f1f;
+  --color-divider: #252525;
+
+  /* ── Semantic: Feedback ── */
+  --color-success: #22c55e;
+  --color-success-muted: color-mix(in srgb, #22c55e 15%, transparent);
+  --color-warning: #f59e0b;
+  --color-warning-muted: color-mix(in srgb, #f59e0b 15%, transparent);
+  --color-error: #ef4444;
+  --color-error-muted: color-mix(in srgb, #ef4444 15%, transparent);
+  --color-info: #3b82f6;
+  --color-info-muted: color-mix(in srgb, #3b82f6 15%, transparent);
+
+  /* ── Typography ── */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --text-display: 2rem;
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 300;
+
+  --text-heading: 1.5rem;
+  --text-heading--line-height: 1.25;
+  --text-heading--letter-spacing: -0.01em;
+  --text-heading--font-weight: 500;
+
+  --text-title: 1.125rem;
+  --text-title--line-height: 1.35;
+  --text-title--font-weight: 600;
+
+  --text-subtitle: 1rem;
+  --text-subtitle--line-height: 1.4;
+  --text-subtitle--font-weight: 500;
+
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.6;
+  --text-body--font-weight: 400;
+
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--font-weight: 400;
+
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.4;
+  --text-label--letter-spacing: 0.08em;
+  --text-label--font-weight: 500;
+
+  --text-button: 0.875rem;
+  --text-button--line-height: 1.25;
+  --text-button--font-weight: 600;
+
+  /* ── Spacing (8pt system) ── */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* ── Radius ── */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 10px 4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 20px 10px rgba(0, 0, 0, 0.12);
+  --shadow-glow-red: 0 0 40px rgba(255, 20, 54, 0.15);
+  --shadow-glow-gold: 0 0 30px rgba(201, 169, 98, 0.12);
+
+  /* ── Motion ── */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --width-mobile: 390px;
+  --height-tab-bar: 5.5rem;
+  --height-header: 3.5rem;
+  --touch-target-min: 2.75rem;
+}
+
+/* Light mode readiness */
+[data-theme='light'] {
+  --color-background: var(--color-neutral-white);
+  --color-surface: #f8f8f8;
+  --color-surface-elevated: var(--color-neutral-white);
+  --color-surface-overlay: #f0f0f0;
+  --color-disabled-surface: var(--color-neutral-gray-1);
+  --color-text-primary: var(--color-neutral-black);
+  --color-text-secondary: var(--color-neutral-gray-3);
+  --color-text-disabled: var(--color-neutral-gray-2);
+  --color-text-inverse: var(--color-neutral-white);
+  --color-border: var(--color-neutral-gray-1);
+  --color-border-subtle: #f0f0f0;
+  --color-divider: #eeeeee;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    color: var(--color-text-primary);
+    background: var(--color-background);
+  }
+
+  #root {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    background: #0a0a0a;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display);
+    line-height: var(--text-display--line-height);
+    letter-spacing: var(--text-display--letter-spacing);
+    font-weight: var(--text-display--font-weight);
+  }
+
+  .text-heading {
+    font-size: var(--text-heading);
+    line-height: var(--text-heading--line-height);
+    letter-spacing: var(--text-heading--letter-spacing);
+    font-weight: var(--text-heading--font-weight);
+  }
+
+  .text-title {
+    font-size: var(--text-title);
+    line-height: var(--text-title--line-height);
+    font-weight: var(--text-title--font-weight);
+  }
+
+  .text-subtitle {
+    font-size: var(--text-subtitle);
+    line-height: var(--text-subtitle--line-height);
+    font-weight: var(--text-subtitle--font-weight);
+  }
+
+  .text-body {
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-weight: var(--text-body--font-weight);
+  }
+
+  .text-caption {
+    font-size: var(--text-caption);
+    line-height: var(--text-caption--line-height);
+    font-weight: var(--text-caption--font-weight);
+  }
+
+  .text-label {
+    font-size: var(--text-label);
+    line-height: var(--text-label--line-height);
+    letter-spacing: var(--text-label--letter-spacing);
+    font-weight: var(--text-label--font-weight);
+    text-transform: uppercase;
+  }
+
+  .gradient-red {
+    background: linear-gradient(244deg, #b20724 17.53%, #730109 96.22%);
+  }
+
+  .gradient-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+  }
+
+  .gradient-card-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
