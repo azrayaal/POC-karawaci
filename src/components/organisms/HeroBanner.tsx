@@ -20,7 +20,7 @@ export function HeroBanner({
 }: HeroBannerProps) {
   return (
     <section
-      className={cn('relative -mx-4 h-[420px] overflow-hidden', className)}
+      className={cn('relative h-[420px] overflow-hidden', className)}
       aria-label="Featured promotion"
     >
       <img src={image} alt="" className="absolute inset-0 size-full object-cover" />

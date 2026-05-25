@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Camera, Car, MapPin, Receipt, Sparkles } from 'lucide-react'
 import { AppHeader } from '@/components/organisms/AppHeader'
-import { NavMenu } from '@/components/organisms/NavMenu'
 import { HeroBanner, QuickActions } from '@/components/organisms/HeroBanner'
 import { ChipGroup } from '@/components/molecules/Chip'
 import { PromoCard } from '@/components/molecules/PromoCard'
@@ -24,7 +23,7 @@ export function HomeScreen() {
 
   return (
     <div className="pb-6">
-      <AppHeader transparent showSearch showNotifications />
+      <AppHeader showSearch showNotifications showNavMenu />
 
       <HeroBanner
         title="One-Stop Premium Shopping for Everyone"
@@ -32,10 +31,6 @@ export function HomeScreen() {
         image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80"
         ctaLabel="View Details"
       />
-
-      <div className="sticky top-0 z-30 border-b border-border-subtle bg-background/95 backdrop-blur-xl">
-        <NavMenu />
-      </div>
 
       <div className="space-y-8 px-4">
         <section aria-label="Membership card">
