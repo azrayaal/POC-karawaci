@@ -1,11 +1,25 @@
-import { Home, MapPin, Sparkles, User } from 'lucide-react'
+import {
+  TabAccountIcon,
+  TabDirectoryIcon,
+  TabHomeIcon,
+  TabLoyaltyIcon,
+  type TabIconProps,
+} from '@/components/icons/TabBarIcons'
+
+export type TabIconComponent = React.ComponentType<TabIconProps>
 
 export const mainNavItems = [
-  { to: '/', label: "What's New", shortLabel: 'Home', icon: Home, end: true },
-  { to: '/directory', label: 'Directory', shortLabel: 'Directory', icon: MapPin, end: false },
-  { to: '/loyalty', label: 'Loyalty', shortLabel: 'Loyalty', icon: Sparkles, end: false },
-  { to: '/profile', label: 'Account', shortLabel: 'Account', icon: User, end: false },
-] as const
+  { to: '/', label: "What's New", shortLabel: 'Home', icon: TabHomeIcon, end: true },
+  { to: '/directory', label: 'Directory', shortLabel: 'Directory', icon: TabDirectoryIcon, end: false },
+  { to: '/loyalty', label: 'Loyalty', shortLabel: 'Loyalty', icon: TabLoyaltyIcon, end: false },
+  { to: '/profile', label: 'Account', shortLabel: 'Account', icon: TabAccountIcon, end: false },
+] as const satisfies ReadonlyArray<{
+  to: string
+  label: string
+  shortLabel: string
+  icon: TabIconComponent
+  end?: boolean
+}>
 
 export const scanRoute = '/scan'
 

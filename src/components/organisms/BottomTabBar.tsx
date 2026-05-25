@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { ScanLine } from 'lucide-react'
+import { TabScanIcon } from '@/components/icons/TabBarIcons'
 import { cn } from '@/design-system/utils/cn'
 import { isNavActive, mainNavItems, scanRoute } from '@/config/navigation'
 
@@ -30,7 +30,7 @@ export function BottomTabBar() {
                   active ? 'bg-primary-muted text-primary' : 'text-text-disabled',
                 )}
               >
-                <Icon className="size-[18px]" strokeWidth={active ? 2.5 : 2} aria-hidden />
+                <Icon active={active} />
               </span>
               <span
                 className={cn(
@@ -62,7 +62,7 @@ export function BottomTabBar() {
                   isActive && 'ring-2 ring-primary/40 ring-offset-2 ring-offset-surface',
                 )}
               >
-                <ScanLine className="size-6 text-white" strokeWidth={2.25} />
+                <TabScanIcon active={isActive} className="text-white" />
               </span>
               <span
                 className={cn(
@@ -92,7 +92,7 @@ export function BottomTabBar() {
                   active ? 'bg-primary-muted text-primary' : 'text-text-disabled',
                 )}
               >
-                <Icon className="size-[18px]" strokeWidth={active ? 2.5 : 2} aria-hidden />
+                <Icon active={active} />
               </span>
               <span
                 className={cn(
